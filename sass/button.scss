@@ -1,0 +1,31 @@
+.buton {
+    color: #000;
+    padding: 13px;
+    width: 12rem;
+    text-align: center;
+    border: 2px solid black;
+    font-size: 15px;
+    background-color: #fff;
+    border-radius: 0%;
+}
+
+.buton:hover {
+    color: #fff;
+    background-color: #000;
+}
+
+.butonBlack {
+    color: #fff;
+    padding: 13px;
+    width: 12rem;
+    text-align: center;
+    border: 2px solid black;
+    font-size: 15px;
+    background-color: #000;
+    border-radius: 0%;
+}
+
+.butonBlack:hover {
+    background-color: #fff;
+    color: "000";
+}

@@ -1,4 +1,5 @@
 @import "variables.scss";
+@import "button.scss";
 body {
     font-family: $font-main;
 }
@@ -14,4 +15,22 @@ body {
     background-position: center center;
     background-attachment: fixed;
     height: 30rem;
+}
+
+// **************section 1********************************
+.card {
+    .card-img-overlay {
+        opacity: 0;
+    }
+    &:hover {
+        .card-img-overlay {
+            opacity: 1;
+            background-color: rgba(0, 0, 0, 0.295);
+            cursor: pointer;
+        }
+    }
+}
+
+.imgFor {
+    height: 320px;
 }
