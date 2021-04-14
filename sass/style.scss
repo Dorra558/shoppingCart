@@ -8,6 +8,20 @@ body {
     font-size: $sizeIcon;
 }
 
+.logoo {
+    width: 100px;
+}
+
+.navbar-nav {
+    .nav-item {
+        .nav-link {
+            &:hover {
+                color: #d29f26;
+            }
+        }
+    }
+}
+
 .about {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../imgs/sport.jpg');
     background-repeat: no-repeat;
@@ -33,4 +47,19 @@ body {
 
 .imgFor {
     height: 320px;
+}
+
+// *************section 2*******************************
+.cardShop {
+    .card {
+        border: none;
+    }
+    .card-img-top {
+        height: 15rem;
+    }
+}
+
+// ************footer****************************
+.foot {
+    border: 1px solid black;
 }

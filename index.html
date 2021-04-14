@@ -8,32 +8,36 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="imgs/logo.png" />
 </head>
 
 <body>
     <section>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light ">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">Navbar</a>
+                <a class="navbar-brand" href="#"><img src="imgs/logo.png" class="logoo" alt=""></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse container" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Mark</a>
+                            <a class="nav-link active fw-bold" aria-current="page" href="#mark">Mark</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">News</a>
+                            <a class="nav-link active fw-bold" href="#news">News</a>
                         </li>
                     </ul>
 
-                    <div class="searchbar">
+                    <div class="searchbar py-2">
                         <input class="search_input" type="text" name="" placeholder="Search...">
-                        <a href="#" class="search_icon"><i class="fas fa-search"></i></a>
+                        <a href="#" class="search_icon"><i class="text-dark fas fa-search pe-2"></i></a>
                     </div>
-                    <i class="fab fa-gratipay sizIcon"></i>
-                    <i class="fas fa-shopping-cart sizIcon "></i>
+                    <i class="fab fa-gratipay sizIcon pe-2"></i>
+                    <a href="cart.html">
+                        <i class="text-dark fas fa-shopping-cart sizIcon pe-2 "></i>
+
+                    </a>
                     <i class="fas fa-user-circle siz sizIcon"></i>
 
                 </div>
@@ -45,7 +49,7 @@
     <!-- *****************End Nav*************************** -->
 
     <div class="about pb-5">
-        <h3 class="p-5">customize your products according to your wishes!</h3>
+        <h3 class="p-5 fw-bold text-white">customize your products according to your wishes!</h3>
         <div class="row">
             <div class="col-md-2 col-4"></div>
             <div class="col-md-4 col-4">
@@ -110,7 +114,7 @@
     <!-- ******************Section 3******************************** -->
 
     <section>
-        <div class="container py-5">
+        <div class="container py-5" id="mark">
             <h1 class="text-uppercase text-center fw-bold pb-4">Featured marks</h1>
 
             <ul class="nav nav-pills mb-3 d-flex justify-content-center" id="pills-tab" role="tablist">
@@ -134,34 +138,43 @@
             <div class="tab-content" id="pills-tabContent">
 
                 <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-                    <div class="row d-flex justify-content-center pt-3">
+                    <div class="cardShop row d-flex justify-content-center pt-3">
                         <div class="col-md-4">
-                            <div class="card w-75">
+                            <div class=" text-center w-75">
                                 <img src="imgs/all1.jpg" class="card-img-top" alt="...">
                                 <div class="card-body">
-                                    <h5 class="card-title">Spring jacket</h5>
-                                    <p class="card-text">Somcard's content.</p>
-                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                    <h5 class="fw-bold card-title">Spring jacket</h5>
+                                    <div class="d-flex justify-content-around">
+                                        <p class="card-text">Price</p>
+                                        <p class="fw-bold">In stock</p>
+                                    </div> <br>
+                                    <a href="#" class="buton btn btn-primary">Add to cart</a>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-4">
-                            <div class="card w-75">
+                            <div class="text-center card w-75">
                                 <img src="imgs/all2.jpg" class="card-img-top " alt="...">
                                 <div class="card-body">
-                                    <h5 class="card-title"> Swoosh Cap</h5>
-                                    <p class="card-text">Somcard's content.</p>
-                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                    <h5 class="fw-bold card-title"> Swoosh Cap</h5>
+                                    <div class="d-flex justify-content-around">
+                                        <p class="card-text">Price</p>
+                                        <p class="fw-bold">In stock</p>
+                                    </div> <br>
+                                    <a href="#" class="buton btn btn-primary">Add to cart</a>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-4">
-                            <div class="card w-75">
+                            <div class="text-center card w-75">
                                 <img src="imgs/all3.jpg" class="card-img-top" alt="...">
                                 <div class="card-body">
-                                    <h5 class="card-title">Dress</h5>
-                                    <p class="card-text">Somcard's content.</p>
-                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                    <h5 class="fw-bold card-title">Dress</h5>
+                                    <div class="d-flex justify-content-around">
+                                        <p class="card-text">Price</p>
+                                        <p class="fw-bold">In stock</p>
+                                    </div> <br>
+                                    <a href="#" class="buton btn btn-primary">Add to cart</a>
                                 </div>
                             </div>
                         </div>
@@ -178,6 +191,81 @@
         </div>
     </section>
 
+    <!-- **************section 4********************************** -->
+
+    <section>
+        <div class="container" id="news">
+            <h1 class="text-uppercase text-center fw-bold pb-4">New arrivals</h1>
+
+            <div class="row cardShop">
+                <div class="col-md-4">
+                    <div class="text-center card w-75">
+                        <img src="imgs/nike.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="fw-bold card-title">Shoes</h5>
+                            <div class="d-flex justify-content-around">
+                                <p class="card-text">Price</p>
+                                <p class="fw-bold">In stock</p>
+                            </div> <br>
+                            <a href="#" class="buton btn btn-primary">Add to cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="text-center card w-75">
+                        <img src="imgs/gucci.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="fw-bold card-title">Bag</h5>
+                            <div class="d-flex justify-content-around">
+                                <p class="card-text">Price</p>
+                                <p class="fw-bold">In stock</p>
+                            </div> <br>
+                            <a href="#" class="buton btn btn-primary">Add to cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="text-center card w-75">
+                        <img src="imgs/t-shirt.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="fw-bold card-title">T-Shirt</h5>
+                            <div class="d-flex justify-content-around">
+                                <p class="card-text">Price</p>
+                                <p class="fw-bold">In stock</p>
+                            </div> <br>
+                            <a href="#" class="buton btn btn-primary">Add to cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- *******************footer********************************* -->
+
+    <hr class="mt-5 foot">
+    <div class="container pb-5">
+        <div class="row">
+            <div class="col-md-4">
+                <img src="imgs/logo.png" class="w-50" alt="">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste ducimus eligendi minus voluptatum vontore ea earum veritatis rem, ipsam vero neque!</p>
+            </div>
+            <div class="col-md-4">
+                <p class="">Sign up to receive exclusive updates and content</p> <br>
+                <input type="text" placeholder="Enter your email">
+            </div>
+            <div class="col-md-4">
+                <h4 class="fw-bold text-center">Follow Us</h4> <br>
+                <div class="d-flex justify-content-center">
+                    <i class="fab fa-instagram fa-2x pe-3"></i>
+                    <i class="fab fa-youtube fa-2x pe-3"></i>
+                    <i class="fab fa-facebook-f fa-2x pe-3"></i>
+                    <i class="fab fa-twitter fa-2x pe-3"></i>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- ***************script js******************** -->
     <script src="js/bootstrap.js"></script>
 </body>
