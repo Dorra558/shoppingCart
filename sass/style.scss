@@ -2,14 +2,20 @@
 @import "button.scss";
 body {
     font-family: $font-main;
+    margin: 0%;
+    padding: 0%;
 }
 
 .sizIcon {
     font-size: $sizeIcon;
 }
 
+a {
+    text-decoration: none;
+}
+
 .logoo {
-    width: 100px;
+    width: 60px;
 }
 
 .navbar-nav {

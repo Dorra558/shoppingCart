@@ -37,14 +37,20 @@ body {
 
 body {
   font-family: "Kiwi Maru", serif;
+  margin: 0%;
+  padding: 0%;
 }
 
 .sizIcon {
   font-size: 27px;
 }
 
+a {
+  text-decoration: none;
+}
+
 .logoo {
-  width: 100px;
+  width: 60px;
 }
 
 .navbar-nav .nav-item .nav-link:hover {
