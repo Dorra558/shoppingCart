@@ -87,6 +87,8 @@ function totalCost(product) {
     }
 }
 
+
+
 function displayCart() {
     let cartItems = localStorage.getItem("productsInCart")
     cartItems = JSON.parse(cartItems)
@@ -121,7 +123,10 @@ function displayCart() {
         productContainer.innerHTML += `
         <div class="container totalStock">
              <div class="row py-3">
-                <div class="col-md-2 offset-8"
+             <div class="col-md-3 offset-5">
+             <button type="button" class="butonBlack btn btn-outline-dark">Empty basket</button>
+             </div>
+                <div class="col-md-2"
                 <h4> Total </h4>
                 </div>
                 <div class="col-md-2"

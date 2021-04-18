@@ -13,7 +13,7 @@
 
 <body>
     <section>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+        <nav class="navbar navbar-expand-lg navbar-light scrolling-navbar fixed-top" id="mainnav">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#"><img src="imgs/logo.png" class="logoo" alt=""></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,26 +29,62 @@
                         </li>
                     </ul>
 
-                    <div class="searchbar py-2">
+                    <div class="searchbar mx-auto py-2">
                         <input class="search_input" type="text" class="serchBox" name="" placeholder="Search...">
-                        <a href="#" class="search_icon"><i class="text-dark fas fa-search pe-2"></i></a>
+                        <a href="#" class="search_icon"><i class="recherche recherche text-dark fas fa-search pe-2"></i></a>
                     </div>
-                    <i class="fab fa-gratipay sizIcon pe-2"></i>
-                    <a href="cart.html" class="text-dark panier pe-2">
+                    <i class="fas fa-heart sizIcon "></i>
+                    <a href="cart.html" class="text-dark panier px-3">
                         <i class="text-dark fas fa-shopping-cart sizIcon"></i><span class="fw-bold">0</span>
                     </a>
-                    <i class="fas fa-user-circle siz sizIcon"></i>
 
+                    <a href="" data-bs-toggle="modal" data-bs-target="#connexion" id="iconUser"><i class=" text-dark fas fa-user-circle siz sizIcon"></i></a>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="connexion" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title " id="exampleModalLabel">Login</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="md-form mb-2">
+                                            <input type="email" class="form-control validate" id="inputEmail3" placeholder="Enter your email" required>
+                                        </div>
+
+                                        <div class="md-form mb-2">
+                                            <input type="password" class="form-control was-validated" id="inputPassword3" placeholder="Enter password" required>
+                                            <p class="font-small blue-text d-flex justify-content-center">Forgot your <a href="#" class="blue-text ml-1">password</a>?</p>
+                                        </div>
+
+                                        <div class="text-center mb-3">
+                                            <button class="btn btn-primary btn-block z-depth-1a">Se connecter</button>
+                                        </div>
+
+                                        <p class="font-small dark-grey-text d-flex justify-content-center mt-2">Register by:</p>
+                                        <div class="row d-flex justify-content-around">
+                                            <button type="button" class="btn btn-primary z-depth-2"> <i class="fab fa-facebook-f text-center"></i></button>
+                                            <button type="button" class="btn btn-info z-depth-2 mx-3"> <i class="fab fa-twitter text-center"></i></button>
+                                            <button type="button" class="btn btn-danger z-depth-2"> <i class="fab fa-google-plus-g text-center"></i></button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </nav>
     </section>
 
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-chevron-up"></i></button>
 
     <!-- *****************End Nav*************************** -->
 
     <div class="about pb-5">
-        <h3 class="p-5 fw-bold text-white">customize your products according to your wishes!</h3>
+        <h2 class="p-5 fw-bold text-white">customize your products according to your wishes!</h2>
         <div class="row">
             <div class="col-md-2 col-4"></div>
             <div class="col-md-4 col-4">
@@ -64,13 +100,13 @@
 
     <section>
         <div class="container py-5">
-            <h1 class="text-uppercase text-center fw-bold">bring the future to the light</h1>
+            <h2 class="text-uppercase text-center fw-bold">bring the future to the light</h2>
             <div class="row py-3">
                 <div class="col-md-3 col-6 offset-3">
                     <button type="button" class="buton btn btn-outline-dark">Shop</button>
                 </div>
                 <col class="col-md-3 col-6">
-                <button type="button" class="butonBlack btn btn-outline-dar k">Explore</button>
+                <button type="button" class="butonBlack btn btn-outline-dark">Explore</button>
 
             </div>
         </div>
@@ -80,7 +116,7 @@
 
     <section class="section who">
         <div class="container py-5">
-            <h1 class="text-uppercase text-center fw-bold pb-4">for who ?</h1>
+            <h2 class="text-uppercase text-center fw-bold pb-4">for who ?</h2>
             <div class="row">
                 <div class="col-md-4">
                     <div class="card bg-dark text-white">
@@ -114,9 +150,9 @@
 
     <section>
         <div class="container py-5" id="mark">
-            <h1 class="text-uppercase text-center fw-bold pb-4">Featured marks</h1>
+            <h2 class="text-uppercase text-center fw-bold pb-4">Featured marks</h2>
 
-            <ul class="nav nav-pills mb-3 d-flex justify-content-center" id="pills-tab" role="tablist">
+            <ul class="tabsProduct nav nav-pills mb-3 d-flex justify-content-center" id="pills-tab" role="tablist">
                 <li class="nav-item" role="presentation">
                     <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">All</button>
                 </li>
@@ -127,15 +163,15 @@
                     <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Nike</button>
                 </li>
                 <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Luis Vuitton</button>
+                    <button class="nav-link" id="pills-luis-tab" data-bs-toggle="pill" data-bs-target="#pills-luis" type="button" role="tab" aria-controls="pills-luis" aria-selected="false">Luis Vuitton</button>
                 </li>
                 <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Versace</button>
+                    <button class="nav-link" id="pills-vercase-tab" data-bs-toggle="pill" data-bs-target="#pills-vercase" type="button" role="tab" aria-controls="pills-vercase" aria-selected="false">Versace</button>
                 </li>
             </ul>
 
             <div class="tab-content" id="pills-tabContent">
-
+                <!-- ***********All mark********* -->
                 <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
                     <div class="cardShop row d-flex justify-content-center pt-3">
                         <div class="col-md-4">
@@ -180,11 +216,183 @@
                     </div>
                 </div>
 
+                <!-- *************Mark Gucci*************** -->
+                <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                    <div class="cardShop row d-flex justify-content-center pt-3">
+                        <div class="col-md-4">
+                            <div class=" text-center w-75">
+                                <img src="imgs/gucci.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="fw-bold card-title">Spring jacket</h5>
+                                    <div class="d-flex justify-content-around">
+                                        <p class="card-text">Price</p>
+                                        <p class="fw-bold">In stock</p>
+                                    </div> <br>
+                                    <a href="#" class="buton btn btn-primary">Add to cart</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="text-center card w-75">
+                                <img src="imgs/gucci1.jpg" class="card-img-top " alt="...">
+                                <div class="card-body">
+                                    <h5 class="fw-bold card-title"> Swoosh Cap</h5>
+                                    <div class="d-flex justify-content-around">
+                                        <p class="card-text">Price</p>
+                                        <p class="fw-bold">In stock</p>
+                                    </div> <br>
+                                    <a href="#" class="buton btn btn-primary">Add to cart</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="text-center card w-75">
+                                <img src="imgs/gucci3.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="fw-bold card-title">Dress</h5>
+                                    <div class="d-flex justify-content-around">
+                                        <p class="card-text">Price</p>
+                                        <p class="fw-bold">In stock</p>
+                                    </div> <br>
+                                    <a href="#" class="buton btn btn-primary">Add to cart</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- *********Mark Nike*************** -->
+                <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+                    <div class="cardShop row d-flex justify-content-center pt-3">
+                        <div class="col-md-4">
+                            <div class=" text-center w-75">
+                                <img src="imgs/nike1.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="fw-bold card-title">Spring jacket</h5>
+                                    <div class="d-flex justify-content-around">
+                                        <p class="card-text">Price</p>
+                                        <p class="fw-bold">In stock</p>
+                                    </div> <br>
+                                    <a href="#" class="buton btn btn-primary">Add to cart</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="text-center card w-75">
+                                <img src="imgs/nike2.jpg" class="card-img-top " alt="...">
+                                <div class="card-body">
+                                    <h5 class="fw-bold card-title"> Swoosh Cap</h5>
+                                    <div class="d-flex justify-content-around">
+                                        <p class="card-text">Price</p>
+                                        <p class="fw-bold">In stock</p>
+                                    </div> <br>
+                                    <a href="#" class="buton btn btn-primary">Add to cart</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="text-center card w-75">
+                                <img src="imgs/nike3.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="fw-bold card-title">Dress</h5>
+                                    <div class="d-flex justify-content-around">
+                                        <p class="card-text">Price</p>
+                                        <p class="fw-bold">In stock</p>
+                                    </div> <br>
+                                    <a href="#" class="buton btn btn-primary">Add to cart</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- **********Mark Luis Vuitton******************* sac ceinture/ ceinture -->
+                <div class="tab-pane fade" id="pills-luis" role="tabpanel" aria-labelledby="pills-luis-tab">
+                    <div class="cardShop row d-flex justify-content-center pt-3">
+                        <div class="col-md-4">
+                            <div class=" text-center w-75">
+                                <img src="imgs/luis1.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="fw-bold card-title">Spring jacket</h5>
+                                    <div class="d-flex justify-content-around">
+                                        <p class="card-text">Price</p>
+                                        <p class="fw-bold">In stock</p>
+                                    </div> <br>
+                                    <a href="#" class="buton btn btn-primary">Add to cart</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="text-center card w-75">
+                                <img src="imgs/luis2.jpg" class="card-img-top " alt="...">
+                                <div class="card-body">
+                                    <h5 class="fw-bold card-title"> Swoosh Cap</h5>
+                                    <div class="d-flex justify-content-around">
+                                        <p class="card-text">Price</p>
+                                        <p class="fw-bold">In stock</p>
+                                    </div> <br>
+                                    <a href="#" class="buton btn btn-primary">Add to cart</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="text-center card w-75">
+                                <img src="imgs/luis3.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="fw-bold card-title">Dress</h5>
+                                    <div class="d-flex justify-content-around">
+                                        <p class="card-text">Price</p>
+                                        <p class="fw-bold">In stock</p>
+                                    </div> <br>
+                                    <a href="#" class="buton btn btn-primary">Add to cart</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-                <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">...</div>
-                <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">...</div>
-                <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">...</div>
-                <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">...</div>
+                <!-- **********Mark Vercase******************************* -->
+                <div class="tab-pane fade" id="pills-vercase" role="tabpanel" aria-labelledby="pills-vercase-tab">
+                    <div class="cardShop row d-flex justify-content-center pt-3">
+                        <div class="col-md-4">
+                            <div class=" text-center w-75">
+                                <img src="imgs/vercase1.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="fw-bold card-title">Spring jacket</h5>
+                                    <div class="d-flex justify-content-around">
+                                        <p class="card-text">Price</p>
+                                        <p class="fw-bold">In stock</p>
+                                    </div> <br>
+                                    <a href="#" class="buton btn btn-primary">Add to cart</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="text-center card w-75">
+                                <img src="imgs/vercase2.jpg" class="card-img-top " alt="...">
+                                <div class="card-body">
+                                    <h5 class="fw-bold card-title"> Swoosh Cap</h5>
+                                    <div class="d-flex justify-content-around">
+                                        <p class="card-text">Price</p>
+                                        <p class="fw-bold">In stock</p>
+                                    </div> <br>
+                                    <a href="#" class="buton btn btn-primary">Add to cart</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="text-center card w-75">
+                                <img src="imgs/vercase3.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="fw-bold card-title">Dress</h5>
+                                    <div class="d-flex justify-content-around">
+                                        <p class="card-text">Price</p>
+                                        <p class="fw-bold">In stock</p>
+                                    </div> <br>
+                                    <a href="#" class="buton btn btn-primary">Add to cart</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
             </div>
         </div>
@@ -193,8 +401,8 @@
     <!-- **************section 4********************************** -->
 
     <section>
-        <div class="container" id="news">
-            <h1 class="text-uppercase text-center fw-bold pb-4">New arrivals</h1>
+        <div class="container py-5" id="news">
+            <h2 class="text-uppercase text-center fw-bold pb-4">New arrivals</h2>
 
             <div class="row cardShop">
                 <div class="col-md-4">
@@ -242,7 +450,7 @@
     </section>
 
     <!-- *************section costumize****************************** -->
-
+    <br>
     <section>
         <div class="container py-5">
             <div class="row">
@@ -258,17 +466,17 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-4 offset-2">
                     <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img src="imgs/all3.jpg " class="imgCost d-block w-100" alt="...">
+                                <img src="imgs/nike1.jpg " class="imgCost d-block w-100" alt="...">
                             </div>
                             <div class="carousel-item">
-                                <img src="imgs/gucci.jpg " class="imgCost d-block w-100" alt="...">
+                                <img src="imgs/gucci1.jpg " class="imgCost d-block w-100" alt="...">
                             </div>
                             <div class="carousel-item">
-                                <img src="imgs/nike.jpg " class="imgCost d-block w-100" alt="...">
+                                <img src="imgs/vercase1.jpg " class="imgCost d-block w-100" alt="...">
                             </div>
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
@@ -313,8 +521,8 @@
         <p class="text-center pb-3"><i class="far fa-copyright"></i>2021 GNVL, All Rights Reserved</p>
     </div>
     <!-- ***************script js******************** -->
-    <script src="script.js"></script>
-
+    <script src="js/script.js"></script>
+    <script src="js/nav.js"></script>
     <script src="js/bootstrap.js"></script>
 </body>
 

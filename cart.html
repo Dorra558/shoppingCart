@@ -12,8 +12,8 @@
 </head>
 
 <body>
-    <section>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+    <section class="py-5">
+        <nav class="navbar navbar-expand-lg navbar-light scrolling-navbar fixed-top" id="mainnav">
             <div class="container-fluid">
                 <a class="navbar-brand" href="index.html"><img src="imgs/logo.png" class="logoo" alt=""></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,29 +29,66 @@
                         </li>
                     </ul>
 
-                    <div class="searchbar py-2">
-                        <input class="search_input" type="text" name="" placeholder="Search...">
-                        <a href="#" class="search_icon"><i class="text-dark fas fa-search pe-2"></i></a>
+                    <div class="searchbar mx-auto py-2">
+                        <input class="search_input" type="text" class="serchBox" name="" placeholder="Search...">
+                        <a href="#" class="search_icon"><i class="recherche recherche text-dark fas fa-search pe-2"></i></a>
                     </div>
-                    <i class="fab fa-gratipay sizIcon pe-2"></i>
-                    <a href="cart.html" class="text-dark panier pe-2">
+                    <i class="fas fa-heart sizIcon "></i>
+                    <a href="cart.html" class="text-dark panier px-3">
                         <i class="text-dark fas fa-shopping-cart sizIcon"></i><span class="fw-bold">0</span>
                     </a>
-                    <i class="fas fa-user-circle siz sizIcon"></i>
 
+                    <a href="" data-bs-toggle="modal" data-bs-target="#connexion" id="iconUser"><i class=" text-dark fas fa-user-circle siz sizIcon"></i></a>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="connexion" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title " id="exampleModalLabel">Login</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="md-form mb-2">
+                                            <input type="email" class="form-control validate" id="inputEmail3" placeholder="Enter your email" required>
+                                        </div>
+
+                                        <div class="md-form mb-2">
+                                            <input type="password" class="form-control was-validated" id="inputPassword3" placeholder="Enter password" required>
+                                            <p class="font-small blue-text d-flex justify-content-center">Forgot your <a href="#" class="blue-text ml-1">password</a>?</p>
+                                        </div>
+
+                                        <div class="text-center mb-3">
+                                            <button class="btn btn-primary btn-block z-depth-1a">Se connecter</button>
+                                        </div>
+
+                                        <p class="font-small dark-grey-text d-flex justify-content-center mt-2">Register by:</p>
+                                        <div class="row d-flex justify-content-around">
+                                            <button type="button" class="btn btn-primary z-depth-2"> <i class="fab fa-facebook-f text-center"></i></button>
+                                            <button type="button" class="btn btn-info z-depth-2 mx-3"> <i class="fab fa-twitter text-center"></i></button>
+                                            <button type="button" class="btn btn-danger z-depth-2"> <i class="fab fa-google-plus-g text-center"></i></button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </nav>
     </section>
 
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-chevron-up"></i></button>
 
+    <br>
     <!-- *****************End Nav*************************** -->
 
-    <h1 class=" container text-uppercase pt-5 fw-bold">your shopping bag</h1>
+    <h2 class=" container text-uppercase pt-5 fw-bold">your shopping bag</h2>
 
     <div class="container pt-4">
         <div class="products-container">
-            <div class="product-header pb-3 d-flex justify-content-around fw-bold">
+            <div class="product-header py-3 d-flex justify-content-around fw-bold">
                 <h6>Image</h6>
                 <h6 class="product-title">Product</h6>
                 <h6 class="quantity">Quantity</h6>
@@ -101,7 +138,8 @@
     <!-- ***************script js******************** -->
 
 
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/nav.js"></script>
     <script src="js/bootstrap.js"></script>
 </body>
 
