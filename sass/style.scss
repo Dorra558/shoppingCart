@@ -14,6 +14,12 @@ a {
     text-decoration: none;
 }
 
+.panier span {
+    background-color: #d29f26;
+    padding: 4px;
+    border-radius: 8px;
+}
+
 .logoo {
     width: 60px;
 }
@@ -37,7 +43,6 @@ a {
     height: 30rem;
 }
 
-// **************section 1********************************
 .card {
     .card-img-overlay {
         opacity: 0;
@@ -65,7 +70,30 @@ a {
     }
 }
 
+// ***********customize**************************
+.costumize {
+    background-color: burlywood;
+}
+
 // ************footer****************************
-.foot {
-    border: 1px solid black;
+.footerr {
+    background-color: rgb(240, 236, 236);
+}
+
+// ****************page cart.html**************************************************
+.product-header {
+    border-bottom: 4px solid black;
+    h6 {
+        font-weight: bold;
+        color: black;
+    }
+}
+
+.imgCart {
+    // width: 8rem;
+    width: 100%;
+}
+
+.product {
+    border-bottom: 1px solid black;
 }

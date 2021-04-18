@@ -2,19 +2,19 @@ let carts = document.querySelectorAll('.add-cart');
 
 let products = [{
         name: 'Shoes',
-        tag: 'White shoes',
+        tag: 'nike',
         price: 70,
         inCart: 0
     },
     {
         name: 'Bag',
-        tag: 'Pink bag',
+        tag: 'gucci',
         price: 90,
         inCart: 0
     },
     {
         name: 'T-shirt',
-        tag: 'Tshirt',
+        tag: 't-shirt',
         price: 80,
         inCart: 0
     }
@@ -75,18 +75,67 @@ function setItems(product) {
 
 function totalCost(product) {
     // console.log("The product price is", product.price)
-    let cartCost = localStorage.getItem('totalCost')
-    console.log("My cartCost is", cartCost)
-    console.log(typeof cartCost)
+    let cartCost = localStorage.getItem('totalCost');
+    console.log("My cartCost is", cartCost);
+    console.log(typeof cartCost);
 
     if (cartCost != null) {
         cartCost = parseInt(cartCost)
-        localStorage.setItem("totalCost", cartCost + product.price)
+        localStorage.setItem("totalCost", cartCost + product.price);
     } else {
-        localStorage.setItem("tatalCost", product.price)
-
+        localStorage.setItem("tatalCost", product.price);
     }
-
 }
 
+function displayCart() {
+    let cartItems = localStorage.getItem("productsInCart")
+    cartItems = JSON.parse(cartItems)
+    let productContainer = document.querySelector('.products')
+    let cartCost = localStorage.getItem('totalCost');
+
+    console.log(cartItems)
+    if (cartItems && productContainer) {
+        productContainer.innerHTML = ''
+
+        // initialement quand j'actualise pour qu'il devient vide
+        Object.values(cartItems).map(item => {
+            productContainer.innerHTML += `
+           
+              <div class="product py-3 d-flex justify-content-around">
+                <img class="imgCart" src='./imgs/${item.tag}.jpg'>
+                <span>${item.name}</span> 
+                <div class="quantity"> 
+                <i class="far fa-arrow-alt-circle-up"></i>
+                <span>${item.inCart}</span>  
+                <i class="far fa-arrow-alt-circle-down"></i>
+                </div>
+                <span> ${item.price},00 DT</span> 
+                <span> ${item.inCart * item.price},00 DT
+               <a href="#" onclick=Delete(this)> 
+                <i class="fas fa-trash-alt"></i>
+               </a> 
+              </div>
+            `
+                // <i class="fas fa-trash-alt"></i>
+        })
+        productContainer.innerHTML += `
+        <div class="container totalStock">
+             <div class="row py-3">
+                <div class="col-md-2 offset-8"
+                <h4> Total </h4>
+                </div>
+                <div class="col-md-2"
+                <h4> ${cartCost},00 DT </h4>
+                </div>
+             </div> 
+        </div>
+        `
+
+
+    }
+}
+
+
+
 onLoadCartNumbers() // quand j'actualise la page le nombre de produit dans la panier reste stocké
+displayCart()

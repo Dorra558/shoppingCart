@@ -49,6 +49,12 @@ a {
   text-decoration: none;
 }
 
+.panier span {
+  background-color: #d29f26;
+  padding: 4px;
+  border-radius: 8px;
+}
+
 .logoo {
   width: 60px;
 }
@@ -86,8 +92,24 @@ a {
   height: 15rem;
 }
 
-.foot {
-  border: 1px solid black;
+.footerr {
+  background-color: #f0ecec;
+}
+
+.product-header {
+  border-bottom: 4px solid black;
+}
+.product-header h6 {
+  font-weight: bold;
+  color: black;
+}
+
+.imgCart {
+  width: 8rem;
+}
+
+.product {
+  border-bottom: 1px solid black;
 }
 
 /*# sourceMappingURL=style.css.map */

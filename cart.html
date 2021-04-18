@@ -15,7 +15,7 @@
     <section>
         <nav class="navbar navbar-expand-lg navbar-light bg-light ">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#"><img src="imgs/logo.png" class="logoo" alt=""></a>
+                <a class="navbar-brand" href="index.html"><img src="imgs/logo.png" class="logoo" alt=""></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
                 </button>
@@ -34,9 +34,8 @@
                         <a href="#" class="search_icon"><i class="text-dark fas fa-search pe-2"></i></a>
                     </div>
                     <i class="fab fa-gratipay sizIcon pe-2"></i>
-                    <a href="cart.html">
-                        <i class="text-dark fas fa-shopping-cart sizIcon pe-2 "></i>
-
+                    <a href="cart.html" class="text-dark panier pe-2">
+                        <i class="text-dark fas fa-shopping-cart sizIcon"></i><span class="fw-bold">0</span>
                     </a>
                     <i class="fas fa-user-circle siz sizIcon"></i>
 
@@ -47,16 +46,42 @@
 
 
     <!-- *****************End Nav*************************** -->
-    <!-- *******************footer********************************* -->
 
-    <hr class="mt-5 foot">
-    <div class="container pb-5">
-        <div class="row">
+    <h1 class=" container text-uppercase pt-5 fw-bold">your shopping bag</h1>
+
+    <div class="container pt-4">
+        <div class="products-container">
+            <div class="product-header pb-3 d-flex justify-content-around fw-bold">
+                <h6>Image</h6>
+                <h6 class="product-title">Product</h6>
+                <h6 class="quantity">Quantity</h6>
+                <h6 class="price">Price</h6>
+                <h6 class="total">Total</h6>
+                <h6>Remove</h6>
+            </div>
+            <div class="products">
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+
+    <!-- *******************footer********************************* -->
+    <!-- 
+
+    <div class="container-fluid footerr pt-5">
+        <div class="row ">
             <div class="col-md-4">
                 <img src="imgs/logo.png" class="w-50" alt="">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste ducimus eligendi minus voluptatum vontore ea earum veritatis rem, ipsam vero neque!</p>
             </div>
             <div class="col-md-4">
+                <h4 class="fw-bold text-center">Newsletter</h4> <br>
                 <p class="">Sign up to receive exclusive updates and content</p> <br>
                 <input type="text" placeholder="Enter your email">
             </div>
@@ -70,8 +95,13 @@
                 </div>
             </div>
         </div>
-    </div>
+        <br>
+        <p class="text-center pb-3"><i class="far fa-copyright"></i>2021 GNVL, All Rights Reserved</p>
+    </div> -->
     <!-- ***************script js******************** -->
+
+
+    <script src="script.js"></script>
     <script src="js/bootstrap.js"></script>
 </body>
 
