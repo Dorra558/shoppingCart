@@ -49,19 +49,18 @@ a {
     z-index: 99;
     border: none;
     outline: none;
-    background-color: black;
+    background-color: #d29f26;
     color: white;
     cursor: pointer;
     padding: 12px;
     border-radius: 10px;
     transition: 0.8s ease-in-out;
-    opacity: 0.5;
+    opacity: 0.8;
 }
 
 #myBtn:hover {
-    background-color: #555;
     border-radius: 50px;
-    opacity: 0.8;
+    opacity: 0.5;
 }
 
 .searchbar {
@@ -73,7 +72,7 @@ a {
     }
     input {
         border: 1px solid #d29f26;
-        padding: 2px;
+        padding: 3px;
     }
 }
 
@@ -119,8 +118,13 @@ a {
         font-size: 15px;
     }
     a &:hover {
-        border: black;
+        border: black !important;
     }
+}
+
+.cardShop .buton:focus {
+    border: #000 !important;
+    background: #000;
 }
 
 // **************section Nav tabs of marks************************
@@ -135,14 +139,6 @@ a {
     border-bottom: 3px solid #d29f26;
 }
 
-
-/*
-.nav-pills .nav-link.active,
-.nav-pills .show>.nav-link {
-    color: #fff;
-    background-color: #0d6efd;
-}*/
-
 // ***********customize**************************
 .costumize {
     background-color: #a18a54;
@@ -152,7 +148,51 @@ a {
 
 // ************footer****************************
 .footerr {
-    background-color: rgb(240, 236, 236);
+    background-color: rgb(36, 35, 35);
+    color: white;
+    h5 {
+        color: #d29f26;
+    }
+}
+
+.newsletter {
+    input {
+        border: 1px solid #d29f26;
+        padding: 2px;
+    }
+    i {
+        background-color: #d29f26;
+        padding: 8px;
+    }
+}
+
+.socialIcon {
+    font-size: 23px;
+    background-color: white;
+    padding: 5px;
+    border-radius: 50%;
+    color: black;
+    opacity: 0.5;
+    &:hover {
+        opacity: 1;
+        cursor: pointer;
+    }
+}
+
+.socialIconFa {
+    padding-left: 9px;
+    padding-right: 9px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    font-size: 23px;
+    background-color: white;
+    border-radius: 50%;
+    color: black;
+    opacity: 0.5;
+    &:hover {
+        opacity: 1;
+        cursor: pointer;
+    }
 }
 
 // ****************page cart.html**************************************************
@@ -171,4 +211,13 @@ a {
 
 .product {
     border-bottom: 2px solid #d29f26;
+}
+
+#totlaProduct {
+    font-weight: bold !important;
+    font-size: 20px;
+    background-color: #d29f26;
+    text-align: center;
+    padding-top: 3px;
+    border: 1px solid #000;
 }

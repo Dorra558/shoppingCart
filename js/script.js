@@ -74,16 +74,14 @@ function setItems(product) {
 }
 
 function totalCost(product) {
-    // console.log("The product price is", product.price)
-    let cartCost = localStorage.getItem('totalCost');
-    console.log("My cartCost is", cartCost);
-    console.log(typeof cartCost);
-
-    if (cartCost != null) {
-        cartCost = parseInt(cartCost)
-        localStorage.setItem("totalCost", cartCost + product.price);
+    let cart = localStorage.getItem("totalCost")
+    console.log(`my total cost are`, totalCost)
+    console.log(typeof cartCost)
+    if (cart != null) {
+        cart = parseInt(cart);
+        localStorage.setItem('totalCost', cart + product.price)
     } else {
-        localStorage.setItem("tatalCost", product.price);
+        localStorage.setItem('totalCost', product.price)
     }
 }
 
@@ -107,15 +105,12 @@ function displayCart() {
                 <img class="imgCart" src='./imgs/${item.tag}.jpg'>
                 <span>${item.name}</span> 
                 <div class="quantity"> 
-                <i class="far fa-arrow-alt-circle-up"></i>
+                <i class="increase far fa-arrow-alt-circle-up"></i>
                 <span>${item.inCart}</span>  
-                <i class="far fa-arrow-alt-circle-down"></i>
+                <i class="decrease far fa-arrow-alt-circle-down"></i>
                 </div>
                 <span> ${item.price},00 DT</span> 
-                <span> ${item.inCart * item.price},00 DT
-               <a href="#" onclick=Delete(this)> 
-                <i class="fas fa-trash-alt"></i>
-               </a> 
+                <span> ${item.inCart * item.price},00 DT 
               </div>
             `
                 // <i class="fas fa-trash-alt"></i>
@@ -124,21 +119,31 @@ function displayCart() {
         <div class="container totalStock">
              <div class="row py-3">
              <div class="col-md-3 offset-5">
-             <button type="button" class="butonBlack btn btn-outline-dark">Empty basket</button>
+             <a href="#" class="btn btn-brand butonBlack empty">Empty basket</a>     
              </div>
                 <div class="col-md-2"
-                <h4> Total </h4>
+                <h4 id="totlaProduct"> Total </h4>
                 </div>
                 <div class="col-md-2"
-                <h4> ${cartCost},00 DT </h4>
+                <h4 id="totlaProduct"> ${cartCost},00 DT </h4>
                 </div>
              </div> 
         </div>
         `
 
 
+        var clearCart = document.querySelector(".empty")
+        clearCart.addEventListener("click", () => {
+            localStorage.clear()
+            productContainer.innerHTML = ''
+            document.querySelector('.panier span').textContent = 0;
+
+        })
+
     }
+
 }
+
 
 
 
